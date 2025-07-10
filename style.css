@@ -1,31 +1,55 @@
+:root {
+    --primary: #4361ee;
+    --secondary: #3a0ca3;
+    --accent: #f72585;
+    --light: #f8f9fa;
+    --dark: #212529;
+}
+
 body {
     font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
-    line-height: 1.6;
+    line-height: 1.8;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: var(--dark);
+    background-color: var(--light);
 }
 
 header {
-    background: #4CAF50;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: white;
-    padding: 1rem;
+    padding: 2rem 1rem;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 nav ul {
     padding: 0;
     list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+nav ul li:hover {
+    transform: translateY(-3px);
 }
 
 nav a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255,255,255,0.2);
 }
 
 main {
@@ -35,20 +59,42 @@ main {
 }
 
 button {
-    background: #4CAF50;
+    background: linear-gradient(135deg, var(--accent), #b5179e);
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    margin: 1rem 0;
 }
 
 button:hover {
-    background: #45a049;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+    background: linear-gradient(135deg, #f72585, #d0006e);
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 footer {
     text-align: center;
-    padding: 1rem;
-    background: #f4f4f4;
+    padding: 2rem;
+    background: var(--dark);
+    color: white;
+    margin-top: 2rem;
 }
