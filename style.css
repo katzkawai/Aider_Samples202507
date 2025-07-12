@@ -53,9 +53,26 @@ nav a:hover {
 }
 
 main {
-    padding: 20px;
-    max-width: 800px;
+    padding: 2rem;
+    max-width: 1000px;
     margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+}
+
+article {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: rgba(0,0,0,0.02);
+    border-radius: 8px;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
 }
 
 button {
